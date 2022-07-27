@@ -2,8 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
     tools:context="MovieDetailsActivity">
 
     <TextView
@@ -13,8 +14,27 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_marginStart="5dp"
+        android:fontFamily="sans-serif"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#00FFE7"
+        android:textSize="36sp"
         tools:text='tools:text="Jurassic World Dominion"' />
+
+
+    <RatingBar
+        android:id="@+id/rbVoteAverage"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="10dp"
+        android:maxWidth="16dp"
+        android:numStars="5"
+        android:scaleX="3"
+        android:scaleY="3"
+        android:stepSize="1" />
 
     <TextView
         android:id="@+id/tvOverview"
@@ -22,18 +42,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/rbVoteAverage"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        tools:text="Four years after Isla Nublar was destroyed, dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history’s most fearsome creatures." />/>
-
-    <RatingBar
-        android:id="@+id/rbVoteAverage"
-        style="@style/Widget.AppCompat.RatingBar.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/tvTitle"
-        android:numStars="5"
-        android:stepSize="0.5" />
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="5dp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        tools:text="Four years after Isla Nublar was destroyed, dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history’s most fearsome creatures." />
 
 </RelativeLayout>
