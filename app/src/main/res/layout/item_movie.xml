@@ -24,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/ivPoster"
         android:fontFamily="sans-serif-black"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -40,8 +39,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="1dp"
         android:layout_toEndOf="@+id/ivPoster"
-        android:fontFamily="sans-serif-light"
+        android:fontFamily="sans-serif-thin"
         android:textColor="#FFFFFF"
         android:textSize="13sp"
+        android:textStyle="italic"
         tools:text="Four years after Isla Nublar was destroyed, dinosaurs now live—and hunt—alongside humans all over the world. This fragile balance will reshape the future and determine, once and for all, whether human beings are to remain the apex predators on a planet they now share with history’s most fearsome creatures." />
 </RelativeLayout>
