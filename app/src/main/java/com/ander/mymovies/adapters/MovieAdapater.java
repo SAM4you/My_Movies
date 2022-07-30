@@ -85,7 +85,10 @@ public class MovieAdapater extends RecyclerView.Adapter<MovieAdapater.ViewHolder
                 // else imageUrl = poster image
                 imageUrl = movie.getPosterPath();
             }
-            Glide.with(context).load(imageUrl).into(ivPoster);
+            Glide.with(context)
+                    .load(imageUrl)
+                    .placeholder(R.drawable.placeholder)
+                    .into(ivPoster);
         }
 
         // when the user clicks on a row, show MovieDetailsActivity for the selected movie
