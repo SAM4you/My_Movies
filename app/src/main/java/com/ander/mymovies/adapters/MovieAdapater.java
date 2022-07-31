@@ -17,6 +17,7 @@ import com.ander.mymovies.MovieDetailsActivity;
 import com.ander.mymovies.R;
 import com.ander.mymovies.models.Movie;
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 
 import org.parceler.Parcels;
 
@@ -85,7 +86,13 @@ public class MovieAdapater extends RecyclerView.Adapter<MovieAdapater.ViewHolder
                 // else imageUrl = poster image
                 imageUrl = movie.getPosterPath();
             }
-            Glide.with(context).load(imageUrl).into(ivPoster);
+            
+            int radius = 20;
+            Glide.with(context)
+                    .load(imageUrl)
+                    .transform(new RoundedCorners(radius))
+                    .placeholder(R.drawable.placeholder)
+                    .into(ivPoster);
         }
 
         // when the user clicks on a row, show MovieDetailsActivity for the selected movie
